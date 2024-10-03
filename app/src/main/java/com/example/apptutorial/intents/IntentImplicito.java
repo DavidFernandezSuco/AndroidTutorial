@@ -1,6 +1,8 @@
 package com.example.apptutorial.intents;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +24,23 @@ public class IntentImplicito extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        EditText textComida = findViewById(R.id.editTextComida);
+        EditText textBebida = findViewById(R.id.editTextBebida);
+        //Recuperar los datos: crear un obejeto Bundle y usar el metodo getIntent().getExtras()
+        Bundle extras = getIntent().getExtras();
+
+        String textoPrueba = extras.getString("prueba");
+        String comida = extras.getString("comida");
+        String bebida = extras.getString("bebida");
+
+
+
+        textComida.setText(comida);
+        textBebida.setText(bebida);
+
+
+        Log.d("prueba", textoPrueba);
+
     }
 }

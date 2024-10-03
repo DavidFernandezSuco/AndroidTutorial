@@ -7,4 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".intents.IntentExplicito">
 
+    <TextView
+        android:id="@+id/textViewComida"
+        android:layout_width="92dp"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:text="COMIDA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <TextView
+        android:id="@+id/textViewBebida"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="BEBIDA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314" />
+
+    <EditText
+        android:id="@+id/editTextComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewComida"
+        app:layout_constraintTop_toTopOf="@+id/textViewComida"
+        tools:layout_editor_absoluteX="168dp" />
+
+    <EditText
+        android:id="@+id/editTextBebida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBebida"
+        app:layout_constraintTop_toTopOf="@+id/textViewBebida"
+        tools:layout_editor_absoluteX="168dp" />
+
+    <Button
+        android:id="@+id/buttonComprar"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+        android:text="Comprar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="335dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
