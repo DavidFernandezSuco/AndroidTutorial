@@ -11,8 +11,8 @@
         android:id="@+id/textViewRecibirComida"
         android:layout_width="203dp"
         android:layout_height="42dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="comida"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +22,21 @@
         android:id="@+id/textViewRecibirBebida"
         android:layout_width="203dp"
         android:layout_height="42dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="120dp"
         android:gravity="center"
         android:text="Bebida"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="90dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="372dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_app" />
 </androidx.constraintlayout.widget.ConstraintLayout>

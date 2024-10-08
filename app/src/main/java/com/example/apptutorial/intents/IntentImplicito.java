@@ -1,8 +1,12 @@
 package com.example.apptutorial.intents;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,12 +39,33 @@ public class IntentImplicito extends AppCompatActivity {
         String bebida = extras.getString("bebida");
 
 
-
         textComida.setText(comida);
         textBebida.setText(bebida);
 
 
         Log.d("prueba", textoPrueba);
 
+        //INTENT IMPLICITO NAVEGADOR
+        //recuperar el imageButton de la vista usando el metodo findViewById para buscar un elemento en la vista por ID
+        ImageView imageButton = findViewById(R.id.imageButton);
+
+        //añadir un listener
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent para abrir un navegador
+                String url = "https://www.flaticon.es/";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+
+                //intent crear alarma
+                //Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM);
+                //.putExtra(AlarmClock.EXTRA_MESSAGE, "Alarma");
+                //.putExtra(AlarmClock.EXTRA_HOUR, 7);
+                //.putExtra(AlarmClock.EXTRA_MINUTES, 10);
+                //startActivity(intent);
+            }
+
+        });
     }
 }
